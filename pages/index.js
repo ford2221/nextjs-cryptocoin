@@ -16,8 +16,8 @@ export default function Home() {
         <NavBar />
         <section className='flex flex-wrap items-center justify-between px-20 pt-20'>
           <div className=''>
-            <h1 className='text-7xl leading-15 pt-12 text-white'>Your gateway<br /> to Bitcoin &<br /> beyond</h1>
-            <p className='text-white leading-10'>The tools and information you need to buy,<br /> sell, trade, invest, and spend cryptocurrencies</p>
+            <h1 className='text-3xl  xl:text-7xl lg:text-7xl leading-15 pt-12 text-white'>Your gateway<br /> to <span className="text-green-500">Bitcoin</span> & <br /> beyond</h1>
+            <p className='text-white  leading-10'>The tools and information you need to buy,<br /> sell, trade, invest, and spend cryptocurrencies</p>
           </div>
           <Image src="/first.png" alt="" width={400} height={400} className="" />
         </section>
