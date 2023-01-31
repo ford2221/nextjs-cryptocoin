@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import NavBar from './navbar'
+import Footer from './footer'
 
 export default function Home() {
   return (
@@ -16,11 +18,56 @@ export default function Home() {
         <NavBar />
         <section className='flex flex-wrap items-center justify-between px-20 pt-20'>
           <div className=''>
-            <h1 className='text-3xl  xl:text-7xl lg:text-7xl leading-15 pt-12 text-white'>Your gateway<br /> to <span className="text-green-500">Bitcoin</span> & <br /> beyond</h1>
-            <p className='text-white  leading-10'>The tools and information you need to buy,<br /> sell, trade, invest, and spend cryptocurrencies</p>
+            <h1 className=' text-3xl text-center xl:text-7xl lg:text-5xl leading-15 pt-12 text-white'>
+              Your gateway<br /> to <span className="text-green-500">Bitcoin</span> &  beyond
+            </h1>
+            <p className='text-white text-center leading-10'>The tools and information you need to buy,<br /> sell, trade, invest, and spend cryptocurrencies</p>
           </div>
-          <Image src="/first.png" alt="" width={400} height={400} className="" />
+          <Image src="/first.png" alt="" width={400} height={400} className="pt-3 " />
         </section>
+        <section style={{ backgroundImage: "url(/bitcoin.jpg)"}} className="bg-cover bg-center">
+          <div className="bg-black py-48 bg-opacity-75 ">
+            <p className=" mx-auto font-bold text-center text-gray-200 text-4xl leading-15 text-bold">
+              The most reliable cryptocurrency platform
+            </p>
+            <h1 className="text-gray-300 mx-auto font-bold  text-2xl text-center pt-2">Pay your daily needs with Bitcoin,<br /> ETH and more cryptocurrencies.</h1>
+          </div>
+        </section>
+
+        <section className='flex flex-wrap flex-col-reverse lg:flex-row xl:flex-row items-center justify-center gap-32 px-20 pt-20'>
+          <Image alt="image/cartera" src="/wa.png" width={280} height={280} />
+          <div className="pt-4">
+            <h1 className="text-gray-200 text-4xl font-bold">
+              Start creating your <br /> cryptocurrency wallet
+            </h1>
+            <p className="text-gray-200 leading-loose pt-4">CryptoCoin is the easiest place to buy  and sell<br /> cryptocurrency. Sign up and get started today.</p>
+          </div>
+        </section>
+
+        <section className="py-20 ">
+          <h1 className="mx-auto text-gray-200 font-bold underline text-center text-4xl">Our Three best Cryto</h1>
+          <div className="flex flex-wrap gap-10 items-center justify-center  pt-20">
+            <div className="w-60 h-72 bg-blue-50 rounded-lg transition ease-in-out delay-200 duration-400 hover:scale-125 hover:cursor-pointer">
+              <Link target="_blank" href="https://coinmarketcap.com/currencies/bitcoin/">
+                <Image alt="imgae/bitcoin" src="/bit.jpeg" width={80} height={80} className="rounded-full mx-auto pt-3" />
+                <p className="text-center leading-loose p-2">Bitcoin​ is a decentralized digital currency and payment system​​ with no central bank or single administrator.</p>
+              </Link>
+            </div>
+            <div className="w-60 h-72 bg-blue-50 rounded-lg transition ease-in-out delay-200 duration-400 hover:scale-125 hover:cursor-pointer">
+              <Link target="_blank" href="https://coinmarketcap.com/currencies/ethereum/">
+                <Image alt="imgae/bitcoinCash" src="/bitcash.png" width={80} height={80} className="rounded-full mx-auto pt-3" />
+                <p className="text-center leading-loose p-2">Bitcoin Cash is a cryptocurrency that is a fork of Bitcoin.</p>
+              </Link>
+            </div>
+            <div className="w-60 h-72 bg-blue-50 rounded-lg transition ease-in-out delay-200 duration-400 hover:scale-125 hover:cursor-pointer">
+              <Link target="_blank" href="https://coinmarketcap.com/currencies/bitcoin-cash/">
+                <Image alt="imgae/bitcoin" src="/etherum.png" width={80} height={80} className="rounded-full mx-auto pt-3" />
+                <p className="text-center leading-loose p-2">Ethereum is a digital platform that adopts blockchain technology.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+        <Footer />
       </main>
     </>
   )
