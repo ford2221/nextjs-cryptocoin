@@ -39,7 +39,9 @@ export default function NavBar() {
           <ul className='lg:flex xl:flex lg:items-center lg:gap-10 lg:space-y-0 space-y-2'>
             <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>Products</li>
             <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>News</li>
-            <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>MarketCoins</li>
+            <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>
+              <Link href="/coinpage" >MarketCoins</Link>
+            </li>
           </ul>
           <div className='flex flex-col lg:flex lg:flex-row lg:items-center lg:gap-4 py-2 space-y-2 lg:space-y-0 '>
             <button type="button" className='text-white text-xs px-4 bg-blue-900 shadow shadow-teal-800 rounded-full transition-all duration-200 p-1'>Sign In</button>
