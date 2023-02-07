@@ -22,7 +22,7 @@ export default function Coinpage() {
   };
 
   useEffect(() => {
-    getData();
+    getData()
   }, []);
 
   return (
@@ -35,7 +35,7 @@ export default function Coinpage() {
       </Head>
       <main className='min-h-[100%]' style={{ background: '#11144c'}}>
         <NavBar />
-          <section className="pt-20 flex justify-center">
+          <section className="pt-24 flex justify-center">
             <div className="flex mb-10">
               <input type="text"
                 className="border text-xs p-2 w-80 rounded-lg bg-blue-900 text-white "

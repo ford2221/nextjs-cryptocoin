@@ -1,9 +1,11 @@
 
 import Link from 'next/link'
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <>
-      <div className="bg-blue-100 flex lg:gap-32 xl:gap-32 gap-10 py-14 text-xs leading-loose  justify-center font-sans">
+      <div className="bg-blue-100 text-gray-500 px-3 flex lg:gap-32 xl:gap-32 gap-10 py-14 text-xs leading-loose  justify-center font-sans">
         <ul >
           <h2 className="font-bold underline">Products</h2>
           <li className="hover:cursor-pointer hover:text-blue-500 hover:underline">Crypto API</li>
@@ -38,8 +40,9 @@ export default function Footer() {
           <li className="hover:cursor-pointer hover:text-blue-500 hover:underline">Instagram</li>
         </ul>
       </div>
-      <div className="p-3 text-center text-xs bg-blue-200 font-sans leading-loose ">
-        Ford-Ndji Joseph, Software engineer.
+      <div className="p-3 text-center text-gray-600 text-xs bg-blue-200 font-sans leading-loose ">
+        Ford-Ndji Joseph, Software engineer. <br />
+        <a href="mailto:fordstelle@gmail.com" className="hover:underline hover:text-blue-700">fordstelle@gmail.com</a>
       </div>
     </>
   )

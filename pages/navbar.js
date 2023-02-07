@@ -7,7 +7,7 @@ export default function NavBar() {
   const [navbar, setNavbar] = useState(false)
 
   const changeBackground = () => {
-    if (window.scrollY >= 66) {
+    if (window.scrollY >= 36) {
       setNavbar(true)
     } else {
       setNavbar(false)
@@ -21,7 +21,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className={`flex justify-between px-6 p-2 items-center  fixed w-full ${navbar ? 'bg-gray-900 transition-all duration-400': 'bg-gradient-to-r from-blue-900 to-transparent'}` } >
+      <nav className={`flex justify-between px-6 p-2 items-center  fixed w-full ${navbar ? 'bg-gray-900 transition delay-300 ease-in-out': 'bg-gradient-to-r from-blue-900 to-transparent'}` } >
         <h1 className='text-3xl font-bold text-white hover:cursor-pointer'>
           <Link href="/" >
             CryptoCoin
@@ -34,16 +34,17 @@ export default function NavBar() {
         </button>
 
         <div className={` py-2 lg:flex lg:items-center lg:gap-32 transition-transform duration-300
-            ${popupState ? 'block lg:hidden rounded-lg px-6 bg-gray-900 shadow shadow-teal-900 w-32 h-auto fixed right-6 top-10 lg:top-0 ' : 'hidden' }`}>
+            ${popupState ? 'block space-y-4 lg:hidden rounded-lg px-6 bg-gray-900 shadow shadow-teal-900 w-32 h-auto fixed right-6 top-10 lg:top-0 ' : 'hidden' }`}>
 
-          <ul className='lg:flex xl:flex lg:items-center lg:gap-10 lg:space-y-0 space-y-2'>
-            <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>Products</li>
-            <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>News</li>
+          <ul className='lg:flex xl:flex lg:items-center lg:gap-10 lg:space-y-0 space-y-4'>
             <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>
-              <Link href="/coinpage" >MarketCoins</Link>
+              <Link href="/newspage" >News</Link>
+            </li>
+            <li className='text-white text-xs text-center hover:text-gray-600 transition-all duration-200 hover:cursor-pointer'>
+              <Link href="/marketcoins" >MarketCoins</Link>
             </li>
           </ul>
-          <div className='flex flex-col lg:flex lg:flex-row lg:items-center lg:gap-4 py-2 space-y-2 lg:space-y-0 '>
+          <div className='flex flex-col lg:flex lg:flex-row lg:items-center lg:gap-4 py-2 space-y-4 lg:space-y-0 '>
             <button type="button" className='text-white text-xs px-4 bg-blue-900 shadow shadow-teal-800 rounded-full transition-all duration-200 p-1'>Sign In</button>
             <button type="button" className='text-white text-xs px-4 shadow shadow-teal-800 rounded-full bg-gradient-to-b from-red-900 to-purple-700 p-1'>Sign Up</button>
           </div>

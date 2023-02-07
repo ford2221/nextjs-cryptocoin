@@ -18,10 +18,10 @@ export default function Home() {
         <NavBar />
         <section className='flex flex-wrap items-center justify-between px-20 pt-20'>
           <div className=''>
-            <h1 className=' text-3xl text-center xl:text-7xl lg:text-5xl leading-15 pt-12 text-white'>
+            <h1 className=' text-3xl text-center lg:text-left xl:text-6xl lg:text-4xl leading-15 pt-12 text-white'>
               Your gateway<br /> to <span className="text-green-500">Bitcoin</span> &  beyond
             </h1>
-            <p className='text-white text-center leading-10'>The tools and information you need to buy,<br /> sell, trade, invest, and spend cryptocurrencies</p>
+            <p className='text-white text-center lg:text-left leading-10'>The tools and information you need to buy,<br /> sell, trade, invest, and spend cryptocurrencies.</p>
           </div>
           <Image src="/first.png" alt="" width={400} height={400} className="pt-3 " />
         </section>
@@ -38,9 +38,9 @@ export default function Home() {
           <Image alt="image/cartera" src="/wa.png" width={280} height={280} />
           <div className="pt-4">
             <h1 className="text-gray-200 text-4xl font-bold">
-              Start creating your <br /> cryptocurrency wallet
+              Start creating your <br /> cryptocurrency <span className="text-green-600">wallet</span>
             </h1>
-            <p className="text-gray-200 leading-loose pt-4">CryptoCoin is the easiest place to buy  and sell<br /> cryptocurrency. Sign up and get started today.</p>
+            <p className="text-gray-200 leading-loose pt-4"><span className="text-green-600 font-bold underline">CryptoCoin</span> is the easiest place to buy  and sell<br /> cryptocurrency. Sign up and get started today.</p>
           </div>
         </section>
 
