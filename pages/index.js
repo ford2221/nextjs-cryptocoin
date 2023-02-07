@@ -49,19 +49,19 @@ export default function Home() {
           <div className="flex flex-wrap gap-10 items-center justify-center  pt-20">
             <div className="w-60 h-72 bg-blue-50 rounded-lg transition ease-in-out delay-200 duration-400 hover:scale-125 hover:cursor-pointer">
               <Link target="_blank" href="https://coinmarketcap.com/currencies/bitcoin/">
-                <Image alt="imgae/bitcoin" src="/bit.jpeg" width={80} height={80} className="rounded-full mx-auto pt-3" />
+                <Image alt="image/bitcoin" src="/bit.jpeg" width={80} height={80} className="rounded-full mx-auto pt-3" />
                 <p className="text-center leading-loose p-2">Bitcoin​ is a decentralized digital currency and payment system​​ with no central bank or single administrator.</p>
               </Link>
             </div>
             <div className="w-60 h-72 bg-blue-50 rounded-lg transition ease-in-out delay-200 duration-400 hover:scale-125 hover:cursor-pointer">
               <Link target="_blank" href="https://coinmarketcap.com/currencies/ethereum/">
-                <Image alt="imgae/bitcoinCash" src="/bitcash.png" width={80} height={80} className="rounded-full mx-auto pt-3" />
+                <Image alt="image/bitcoinCash" src="/bitcash.png" width={80} height={80} className="rounded-full mx-auto pt-3" />
                 <p className="text-center leading-loose p-2">Bitcoin Cash is a cryptocurrency that is a fork of Bitcoin.</p>
               </Link>
             </div>
             <div className="w-60 h-72 bg-blue-50 rounded-lg transition ease-in-out delay-200 duration-400 hover:scale-125 hover:cursor-pointer">
               <Link target="_blank" href="https://coinmarketcap.com/currencies/bitcoin-cash/">
-                <Image alt="imgae/bitcoin" src="/etherum.png" width={80} height={80} className="rounded-full mx-auto pt-3" />
+                <Image alt="image/bitcoin" src="/etherum.png" width={80} height={80} className="rounded-full mx-auto pt-3" />
                 <p className="text-center leading-loose p-2">Ethereum is a digital platform that adopts blockchain technology.</p>
               </Link>
             </div>

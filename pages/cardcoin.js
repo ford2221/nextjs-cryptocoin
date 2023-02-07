@@ -1,4 +1,5 @@
 
+import Image from 'next/image'
 const titles = ["#", "Coin", "Symbol", "Price", "Price Change","24h Volume"];
 
 export default function CardCoin({ coins, search }) {
@@ -23,7 +24,7 @@ export default function CardCoin({ coins, search }) {
           <tr key={coin.id} className="border-b border-gray-800 hover:bg-gray-900 hover:cursor-pointer">
             <td className="text-gray-300 pl-10">{index + 1}</td>
             <td className="flex items-center gap-3 pt-2">
-              <img src={coin.image} alt="" className="" width={20} height={20}/>
+              <Image src={coin.image} alt="" className="" width={20} height={20}/>
               <span className="text-gray-400">{coin.name}</span>
             </td>
             <td><span className="text-gray-300">{coin.symbol}</span></td>

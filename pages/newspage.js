@@ -44,7 +44,7 @@ export default function Coinpage() {
             <Image src="/blogusdt.webp" alt=""  className="rounded-t-lg" width={250} height={220} />
             <h1 className="text-blue-600 text-sm p-2 underline">Tether (USDT) becomes the leading stablecoin in the world’s emerging
                 markets</h1>
-            <p className="text-xs text-gray-500 leading-5 p-2 text-justify">It's official: Tether (USDT) is the leading stablecoin in emerging markets around the
+            <p className="text-xs text-gray-500 leading-5 p-2 text-justify">It&apos;s official: Tether (USDT) is the leading stablecoin in emerging markets around the
               world,especially in Brazil and Argentina.</p>
           </div>
           
