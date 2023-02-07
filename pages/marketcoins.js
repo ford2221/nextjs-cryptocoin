@@ -38,7 +38,7 @@ export default function Coinpage() {
           <section className="pt-24 flex justify-center">
             <div className="flex mb-10">
               <input type="text"
-                className="border text-xs p-2 w-80 rounded-lg bg-blue-900 text-white "
+                className="border text-xs p-2 w-60 lg:w-80 xl:w-80 md:w-80 rounded-lg bg-blue-900 text-white "
                 placeholder="Search a Coin..."
                 autoFocus
                 onChange={(e) => setSearch(e.target.value)}

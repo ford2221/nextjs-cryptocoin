@@ -1,6 +1,7 @@
 
 import Image from 'next/image'
 const titles = ["#", "Coin", "Symbol", "Price", "Price Change","24h Volume"];
+import { navbar } from './navbar'
 
 export default function CardCoin({ coins, search }) {
   const filteredCoins = coins?.filter((coin) =>
@@ -10,39 +11,33 @@ export default function CardCoin({ coins, search }) {
 
   return (
     <>
-      <div className='pb-40 flex justify-center '>
-        <table className="shadow-lg shadow-green-700 border border-gray-800 px-2 w-96 text-xs md:w-4/6 md:text-xs lg:text-base xl:text-base xl:w-5/6 lg:w-5/6">
-        <thead>
-        <tr className="border-b border-gray-800">
-        {titles?.map((title, i) => (
-          <td className="p-4 pl-10 text-gray-400 font-bold" key={i}>{title}</td>
+      <div className='pb-40 flex flex-wrap gap-3 justify-center px-5'>
+        {filteredCoins?.map((coin) => (
+          <div key={coin.id}  className="w-60 h-auto bg-blue-900 rounded-lg text-xs hover:shadow-lg hover:shadow-indigo-800 ">
+            <div className="w-60 h-auto bg-gray-900 opacity-0 rounded-lg mt-1 p-2 hover:cursor-pointer ">
+              <div className="flex gap-6 items-center">
+                <Image src={coin.image} alt="" className="" width={20} height={20}/>
+                <h3 className="text-gray-400 text-xs">{coin.name} ( <span className="text-gray-300">{coin.symbol}</span> )</h3> 
+              </div>
+              <div className="flex items-center justify-between pt-4">
+                <h4 className="text-gray-400">Price:</h4>
+                <p className="text-gray-400">${coin.current_price.toLocaleString()}</p>
+              </div>
+              
+              <div className="flex items-center justify-between  border-t-ingo-500 py-1">
+                <h4 className="text-gray-400">Price Change:</h4>
+                <p className={coin.price_change_percentage_24h > 0 ? "text-green-600 " : "text-red-600 "}>
+                  {coin.price_change_percentage_24h}
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between border-t-ingo-500">
+                <h4 className="text-gray-400">24h Volume:</h4>
+                <p className="text-gray-400">${coin.total_volume.toLocaleString()}</p>
+              </div>
+            </div>
+          </div>
         ))}
-        </tr>
-        </thead>
-        <tbody>
-        {filteredCoins?.map((coin, index) => (
-          <tr key={coin.id} className="border-b border-gray-800 hover:bg-gray-900 hover:cursor-pointer">
-            <td className="text-gray-300 pl-10">{index + 1}</td>
-            <td className="flex items-center gap-3 pt-2">
-              <Image src={coin.image} alt="" className="" width={20} height={20}/>
-              <span className="text-gray-400">{coin.name}</span>
-            </td>
-            <td><span className="text-gray-300">{coin.symbol}</span></td>
-
-            <td className="text-gray-400">${coin.current_price.toLocaleString()}</td>
-
-            <td
-              className={coin.price_change_percentage_24h > 0 ? "text-green-600 p-2" : "text-red-600"}>
-              {coin.price_change_percentage_24h}
-            </td>
-
-            <td className="p-2 text-gray-400">
-            ${coin.total_volume.toLocaleString()}
-            </td>
-          </tr>
-        ))}
-        </tbody>
-        </table>
       </div>
     </>
 
