@@ -14,13 +14,13 @@ export default function CardCoin({ coins, search }) {
         <table className="shadow-lg shadow-green-700 border border-gray-800 px-2 w-96 text-xs md:w-4/6 md:text-xs lg:text-base xl:text-base xl:w-5/6 lg:w-5/6">
         <thead>
         <tr className="border-b border-gray-800">
-        {titles.map((title, i) => (
+        {titles?.map((title, i) => (
           <td className="p-4 pl-10 text-gray-400 font-bold" key={i}>{title}</td>
         ))}
         </tr>
         </thead>
         <tbody>
-        {filteredCoins.map((coin, index) => (
+        {filteredCoins?.map((coin, index) => (
           <tr key={coin.id} className="border-b border-gray-800 hover:bg-gray-900 hover:cursor-pointer">
             <td className="text-gray-300 pl-10">{index + 1}</td>
             <td className="flex items-center gap-3 pt-2">
