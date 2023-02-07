@@ -13,10 +13,10 @@ export default function CardCoin({ coins, search }) {
     <>
       <div className='pb-40 flex flex-wrap gap-3 justify-center px-5'>
         {filteredCoins?.map((coin) => (
-          <div key={coin.id}  className="w-60 h-auto bg-blue-900 rounded-lg text-xs hover:shadow-lg hover:shadow-indigo-800 ">
-            <div className="w-60 h-auto bg-gray-900 opacity-0 rounded-lg mt-1 p-2 hover:cursor-pointer ">
+          <div  key={coin.id} className="w-60 h-auto bg-blue-900 rounded-lg text-xs hover:shadow hover:shadow-indigo-900 ">
+            <div  className="w-60 h-auto bg-gray-900 opacity-80 rounded-lg mt-1 p-2 hover:cursor-pointer ">
               <div className="flex gap-6 items-center">
-                <Image src={coin.image} alt="" className="" width={20} height={20}/>
+                <Image src={coin.image} alt="" width={25} height={25}/>
                 <h3 className="text-gray-400 text-xs">{coin.name} ( <span className="text-gray-300">{coin.symbol}</span> )</h3> 
               </div>
               <div className="flex items-center justify-between pt-4">
